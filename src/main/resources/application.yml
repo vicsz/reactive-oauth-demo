@@ -1,0 +1,27 @@
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+    org.springframework.security.oauth2: DEBUG
+
+spring:
+   security:
+    oauth2:
+      client:
+        registration:
+          login-client:
+            provider: uaa
+            client-id: XXXX
+            client-secret: XXX
+            authorization-grant-type: authorization_code
+            redirect-uri-template: XXX
+            scope: openid
+        provider:
+          uaa:
+            authorization-uri: XXX
+            token-uri: XXX
+            user-info-uri: XXX
+            user-name-attribute: sub
+            jwk-set-uri: XXX
+
